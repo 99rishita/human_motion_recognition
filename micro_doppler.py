@@ -49,9 +49,9 @@ def data_transform(data_all, label):
                         doppler_index = np.array(np.round(np.array(doppler) / 0.0825), dtype=int)
                         matrix_heatmap[doppler_index + 64, np.array(frame)] = np.array(snr)
 
-                    plt.figure()
-                    sns.heatmap(matrix_heatmap, cmap='jet')      
-                    plt.show()
+                    # plt.figure()
+                    # sns.heatmap(matrix_heatmap, cmap='jet')      
+                    # plt.show()
                     training_data.append(matrix_heatmap)
                     label_list.append(label)
                     # clear doppler, snr, frame
